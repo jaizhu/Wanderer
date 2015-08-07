@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="okf-3g-77h">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Loading Trips View Controller-->
+        <scene sceneID="gbB-kX-r0Q">
+            <objects>
+                <viewController id="okf-3g-77h" customClass="LoadingTripsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="54k-Is-ACh"/>
+                        <viewControllerLayoutGuide type="bottom" id="fbk-aY-MIn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lbm-ch-ocQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HEf-c0-G25">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuring trip details..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upU-jE-Ve8">
+                                <rect key="frame" x="90" y="225" width="420" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="420" id="8fM-Zw-wAP"/>
+                                    <constraint firstAttribute="width" constant="420" id="ldA-oW-rxS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="HEf-c0-G25" secondAttribute="centerX" id="4lM-QW-lEH"/>
+                            <constraint firstAttribute="centerY" secondItem="HEf-c0-G25" secondAttribute="centerY" id="TSG-Cm-31G"/>
+                            <constraint firstItem="HEf-c0-G25" firstAttribute="top" secondItem="upU-jE-Ve8" secondAttribute="bottom" constant="25" id="VcC-Cx-Iv5"/>
+                            <constraint firstAttribute="centerX" secondItem="upU-jE-Ve8" secondAttribute="centerX" id="f1d-CS-rla"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="upU-jE-Ve8" id="r57-Im-BnV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyT-Vh-NKt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="275"/>
+        </scene>
+    </scenes>
+</document>

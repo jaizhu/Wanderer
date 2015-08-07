@@ -1,0 +1,25 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.3'
+xcodeproj 'RoadTrip.xcodeproj'
+
+link_with ['RoadTrip']
+
+def import_pods
+    pod 'Bolts'
+    pod 'GoogleMaps'
+    pod 'FBSDKLoginKit'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKShareKit'
+    pod 'Parse'
+    pod 'ParseUI'
+    pod 'ParseFacebookUtilsV4'
+end
+
+target 'RoadTrip' do
+    import_pods
+end
+
+target 'RoadTripTests' do
+
+end
+
